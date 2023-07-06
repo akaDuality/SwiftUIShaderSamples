@@ -159,22 +159,22 @@ struct CDView: View {
                     .mask(Circle())
                     .clipShape(ShapeWithHole(cutout: CGSize(width: 110.0, height: 110.0)))
 
-//                Circle()
-//                    .foregroundColor(.white)
-//                    .frame(width: size+2, height: size+2)
-//                    .colorEffect(
-//                        Shader(function: shaderFunction,
-//                               arguments: [
-//                                .float2(Float(size),
-//                                        Float(size)),
-//                                .float((manager.pitch * 0.02) + 0.01)
-//                               ])
-//                    )
-//                    .blur(radius: 10.0)
-//                    .contrast(3.4)
-//                    .brightness(0.2)
-//                    .mask(Circle())
-//                    .clipShape(ShapeWithHole(cutout: CGSize(width: 110.0, height: 110.0)))
+                Circle()
+                    .foregroundColor(.white)
+                    .frame(width: size+2, height: size+2)
+                    .colorEffect(
+                        Shader(function: shaderFunction,
+                               arguments: [
+                                .float2(Float(size),
+                                        Float(size)),
+                                .float((manager.pitch * 0.02) + 0.01)
+                               ])
+                    )
+                    .blur(radius: 10.0)
+                    .contrast(3.4)
+                    .brightness(0.2)
+                    .mask(Circle())
+                    .clipShape(ShapeWithHole(cutout: CGSize(width: 110.0, height: 110.0)))
 
                 Circle()
                     .foregroundColor(.white)
@@ -203,6 +203,10 @@ struct CDView: View {
             .drawingGroup()
             .rotation3DEffect(.degrees(manager.pitch * 20.0), axis: (1, 0, 0))
             .rotation3DEffect(.degrees(manager.roll * 20.0), axis: (0, 1, 0))
+            .gesture(DragGesture().onChanged({ gesture in
+                manager.pitch = gesture.translation.height / 100
+                manager.roll = gesture.translation.width / 100
+            }))
 
             VStack {
                 Spacer()
