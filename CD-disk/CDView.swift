@@ -7,6 +7,10 @@
 
 import SwiftUI
 
+#Preview {
+    CDView()
+}
+
 struct ShapeWithHole: Shape {
     let cutout: CGSize
     
@@ -218,8 +222,4 @@ struct CDView: View {
         .ignoresSafeArea()
         .statusBarHidden()
     }
-}
-
-#Preview {
-    CDView()
 }
