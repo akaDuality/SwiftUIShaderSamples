@@ -7,21 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		747A125F2A5735EB00EEDCFC /* CD_diskApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747A125E2A5735EB00EEDCFC /* CD_diskApp.swift */; };
+		747A125F2A5735EB00EEDCFC /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747A125E2A5735EB00EEDCFC /* App.swift */; };
 		747A12632A5735EC00EEDCFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 747A12622A5735EC00EEDCFC /* Assets.xcassets */; };
 		747A12662A5735EC00EEDCFC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 747A12652A5735EC00EEDCFC /* Preview Assets.xcassets */; };
 		747A126D2A5735F600EEDCFC /* MotionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747A126C2A5735F600EEDCFC /* MotionManager.swift */; };
 		747A126F2A5735FA00EEDCFC /* CDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747A126E2A5735FA00EEDCFC /* CDView.swift */; };
+		7484F5DA2AB79BAA007985B4 /* airdrop.metal in Sources */ = {isa = PBXBuildFile; fileRef = 7484F5D82AB79BAA007985B4 /* airdrop.metal */; };
+		7484F5DB2AB79BAA007985B4 /* AirDropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7484F5D92AB79BAA007985B4 /* AirDropView.swift */; };
 		74D3C4212A57463700DEA169 /* cd.metal in Sources */ = {isa = PBXBuildFile; fileRef = 74D3C4202A57463700DEA169 /* cd.metal */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		747A125B2A5735EB00EEDCFC /* CD-disk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CD-disk.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		747A125E2A5735EB00EEDCFC /* CD_diskApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CD_diskApp.swift; sourceTree = "<group>"; };
+		747A125E2A5735EB00EEDCFC /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		747A12622A5735EC00EEDCFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		747A12652A5735EC00EEDCFC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		747A126C2A5735F600EEDCFC /* MotionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotionManager.swift; sourceTree = "<group>"; };
 		747A126E2A5735FA00EEDCFC /* CDView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDView.swift; sourceTree = "<group>"; };
+		7484F5D82AB79BAA007985B4 /* airdrop.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = airdrop.metal; sourceTree = "<group>"; };
+		7484F5D92AB79BAA007985B4 /* AirDropView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AirDropView.swift; sourceTree = "<group>"; };
 		74D3C4202A57463700DEA169 /* cd.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = cd.metal; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -55,10 +59,9 @@
 		747A125D2A5735EB00EEDCFC /* CD-disk */ = {
 			isa = PBXGroup;
 			children = (
-				747A125E2A5735EB00EEDCFC /* CD_diskApp.swift */,
-				747A126E2A5735FA00EEDCFC /* CDView.swift */,
-				747A126C2A5735F600EEDCFC /* MotionManager.swift */,
-				74D3C4202A57463700DEA169 /* cd.metal */,
+				747A125E2A5735EB00EEDCFC /* App.swift */,
+				7484F5DC2AB7A216007985B4 /* CD */,
+				7484F5DD2AB7A221007985B4 /* AirDrop */,
 				747A12622A5735EC00EEDCFC /* Assets.xcassets */,
 				747A12642A5735EC00EEDCFC /* Preview Content */,
 			);
@@ -71,6 +74,25 @@
 				747A12652A5735EC00EEDCFC /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		7484F5DC2AB7A216007985B4 /* CD */ = {
+			isa = PBXGroup;
+			children = (
+				747A126E2A5735FA00EEDCFC /* CDView.swift */,
+				747A126C2A5735F600EEDCFC /* MotionManager.swift */,
+				74D3C4202A57463700DEA169 /* cd.metal */,
+			);
+			path = CD;
+			sourceTree = "<group>";
+		};
+		7484F5DD2AB7A221007985B4 /* AirDrop */ = {
+			isa = PBXGroup;
+			children = (
+				7484F5D82AB79BAA007985B4 /* airdrop.metal */,
+				7484F5D92AB79BAA007985B4 /* AirDropView.swift */,
+			);
+			path = AirDrop;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,10 +165,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7484F5DA2AB79BAA007985B4 /* airdrop.metal in Sources */,
 				747A126D2A5735F600EEDCFC /* MotionManager.swift in Sources */,
+				7484F5DB2AB79BAA007985B4 /* AirDropView.swift in Sources */,
 				74D3C4212A57463700DEA169 /* cd.metal in Sources */,
 				747A126F2A5735FA00EEDCFC /* CDView.swift in Sources */,
-				747A125F2A5735EB00EEDCFC /* CD_diskApp.swift in Sources */,
+				747A125F2A5735EB00EEDCFC /* App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

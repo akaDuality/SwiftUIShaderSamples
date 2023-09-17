@@ -12,6 +12,7 @@ struct CD_diskApp: App {
     var body: some Scene {
         WindowGroup {
             CDView()
+//            AirDropView()
         }
     }
 }
