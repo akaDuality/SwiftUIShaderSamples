@@ -8,6 +8,12 @@
 #include <metal_stdlib>
 using namespace metal;
 
+
+
+
+
+
+
 // Standard convert from RGB to HUE
 float3 Hue(float H) {
     half R = abs(H * 6 - 3) - 1;
@@ -19,6 +25,60 @@ float3 Hue(float H) {
 float4 HSVtoRGB(float3 HSV) {
     return float4(((Hue(HSV.x) - 1) * HSV.y + 1) * HSV.z,1);
 }
+
+
+
+
+
+[[ stitchable ]] half4 badge2(float2 position, half4 color, float2 viewSize, float offset, float time) {
+    
+    float hue = clamp(sin(time), -0.5, 0.5); // [0, 1]
+    
+    float gradient = position.x/viewSize.x;
+    return half4(HSVtoRGB(float3(hue, // hue
+                                 1, // saturation
+                                 1 // brightness
+                                 )));
+}
+
+
+
+[[ stitchable ]] half4 animatedGradient(float2 position, half4 color, float2 viewSize, float time) {
+    
+    float gradient = position.x/viewSize.x;
+    
+    float normalizedTime = 0.5 * (sin(time)+1); // sin(time)=[-1; 1], but we moved to [0; 1]
+    
+    float hue = abs(gradient - normalizedTime);
+    float3 hueColor = float3(hue, 1, 1);
+    float4 rgbColor = HSVtoRGB(hueColor);
+    return half4(rgbColor);
+}
+
+
+
+
+
+[[ stitchable ]] half4 badge(float2 position, half4 color, float2 viewSize, float offset, float time) {
+    float hue = (sin(time)+1); // sin=[-1; 1], but we moved to [0; 1]
+    float saturation = abs(hue);
+    
+    float gradient = position.x/viewSize.x;
+    
+    float3 hueColor = float3(saturate(hue) + gradient, 1, 1);
+    float4 rgbColor = HSVtoRGB(hueColor);
+    return half4(rgbColor);
+}
+
+
+
+
+
+
+
+
+
+
 
 float2x2 Rotate(float a) {
     float x=cos(a), y=sin(a);
@@ -56,7 +116,7 @@ float2 centeredRelativeUV(float2 position, float2 viewSize) {
     return uv;
 }
 
-[[ stitchable ]] half4 cdSingleStreak(float2 position, half4 color, float2 viewSize, float accel) {
+[[ stitchable ]] half4 cd_(float2 position, half4 color, float2 viewSize, float accel) {
     float2 uv = centeredRelativeUV(position, viewSize); // Move coordinates to circle center
     
     float minBrightness = 0.4;
@@ -95,4 +155,15 @@ float2 centeredRelativeUV(float2 position, float2 viewSize) {
     }
     
     return half4(resultColor);
+}
+
+#include <SwiftUI/SwiftUI_Metal.h>
+[[ stitchable ]] half4 emboss(float2 position, SwiftUI::Layer layer, float strength) {
+    half4 current_color = layer.sample(position);
+    half4 new_color = current_color;
+    
+    new_color += layer.sample(position + 1) * strength;
+    new_color -= layer.sample(position - 1) * strength;
+    
+    return half4(new_color);
 }
