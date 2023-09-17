@@ -93,7 +93,7 @@ float3 streak(float2 uv, float angle, float3 color, float width, float maxBright
     
     // Create waves
     float streak = cos(uvY * width) // wake waves
-                 * diameter; // brighter on the edge
+    * diameter; // brighter on the edge
     
     // Get only center waves
     float limit = 1/(width/3.);
@@ -102,7 +102,7 @@ float3 streak(float2 uv, float angle, float3 color, float width, float maxBright
         mask = 1.0; // show only single wave near 0
     }
     float centralStreak = clamp(streak * mask, 0., maxBrightness); // limit higher value by 0.6
-                                                         // for addition to default 0.4
+    // for addition to default 0.4
     
     // Use value as brightness
     return float3(color.x,          // H
@@ -141,20 +141,19 @@ float2 centeredRelativeUV(float2 position, float2 viewSize) {
     
     for (float i = 0; i < 25; i++) {
         float width = clamp((sin(i+1)+1) * 100, 10., 180.); // [10, 180]
-
+        
         float hue = sin(i*8.11)+1.0; // 220 is max radian, hue in [0, 2]
-        float3 streakColor = clamp(float3(hue,
-                                          0.7,  // saturation
-                                          0.5), // brightness
-                                   0, 1); // Limit all colors
+        float3 streakColor = saturate(float3(hue,
+                                             0.7,  // saturation
+                                             0.5)); // brightness
         
         float angle = (9*i+sin(accel*i*3));
         float3 streakHSV = streak(uv, angle, streakColor, width, 1 - minBrightness);
         
-        float o = clamp(1 - (width / 180.0), 0., 1.) * 0.9;
+        float o = saturate(1 - (width / 180.0)) * 0.9; // [0, 0.9]
         resultColor += HSVtoRGB(streakHSV) * o;
     }
-
+    
     return half4(resultColor);
 }
 
