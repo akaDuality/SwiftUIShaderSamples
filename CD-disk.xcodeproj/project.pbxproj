@@ -13,7 +13,6 @@
 		747A126D2A5735F600EEDCFC /* MotionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747A126C2A5735F600EEDCFC /* MotionManager.swift */; };
 		747A126F2A5735FA00EEDCFC /* CDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747A126E2A5735FA00EEDCFC /* CDView.swift */; };
 		74D3C4212A57463700DEA169 /* cd.metal in Sources */ = {isa = PBXBuildFile; fileRef = 74D3C4202A57463700DEA169 /* cd.metal */; };
-		74D3C4232A58874300DEA169 /* Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D3C4222A58874300DEA169 /* Badge.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,7 +23,6 @@
 		747A126C2A5735F600EEDCFC /* MotionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotionManager.swift; sourceTree = "<group>"; };
 		747A126E2A5735FA00EEDCFC /* CDView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDView.swift; sourceTree = "<group>"; };
 		74D3C4202A57463700DEA169 /* cd.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = cd.metal; sourceTree = "<group>"; };
-		74D3C4222A58874300DEA169 /* Badge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Badge.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +57,6 @@
 			children = (
 				747A125E2A5735EB00EEDCFC /* CD_diskApp.swift */,
 				747A126E2A5735FA00EEDCFC /* CDView.swift */,
-				74D3C4222A58874300DEA169 /* Badge.swift */,
 				747A126C2A5735F600EEDCFC /* MotionManager.swift */,
 				74D3C4202A57463700DEA169 /* cd.metal */,
 				747A12622A5735EC00EEDCFC /* Assets.xcassets */,
@@ -147,7 +144,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				747A126D2A5735F600EEDCFC /* MotionManager.swift in Sources */,
-				74D3C4232A58874300DEA169 /* Badge.swift in Sources */,
 				74D3C4212A57463700DEA169 /* cd.metal in Sources */,
 				747A126F2A5735FA00EEDCFC /* CDView.swift in Sources */,
 				747A125F2A5735EB00EEDCFC /* CD_diskApp.swift in Sources */,
