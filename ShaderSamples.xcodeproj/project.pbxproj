@@ -18,7 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		747A125B2A5735EB00EEDCFC /* CD-disk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CD-disk.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		747A125B2A5735EB00EEDCFC /* ShaderSamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShaderSamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		747A125E2A5735EB00EEDCFC /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		747A12622A5735EC00EEDCFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		747A12652A5735EC00EEDCFC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -43,7 +43,7 @@
 		747A12522A5735EA00EEDCFC = {
 			isa = PBXGroup;
 			children = (
-				747A125D2A5735EB00EEDCFC /* CD-disk */,
+				747A125D2A5735EB00EEDCFC /* ShaderSamples */,
 				747A125C2A5735EB00EEDCFC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -51,12 +51,12 @@
 		747A125C2A5735EB00EEDCFC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				747A125B2A5735EB00EEDCFC /* CD-disk.app */,
+				747A125B2A5735EB00EEDCFC /* ShaderSamples.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		747A125D2A5735EB00EEDCFC /* CD-disk */ = {
+		747A125D2A5735EB00EEDCFC /* ShaderSamples */ = {
 			isa = PBXGroup;
 			children = (
 				747A125E2A5735EB00EEDCFC /* App.swift */,
@@ -65,7 +65,7 @@
 				747A12622A5735EC00EEDCFC /* Assets.xcassets */,
 				747A12642A5735EC00EEDCFC /* Preview Content */,
 			);
-			path = "CD-disk";
+			path = ShaderSamples;
 			sourceTree = "<group>";
 		};
 		747A12642A5735EC00EEDCFC /* Preview Content */ = {
@@ -98,9 +98,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		747A125A2A5735EB00EEDCFC /* CD-disk */ = {
+		747A125A2A5735EB00EEDCFC /* ShaderSamples */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 747A12692A5735EC00EEDCFC /* Build configuration list for PBXNativeTarget "CD-disk" */;
+			buildConfigurationList = 747A12692A5735EC00EEDCFC /* Build configuration list for PBXNativeTarget "ShaderSamples" */;
 			buildPhases = (
 				747A12572A5735EB00EEDCFC /* Sources */,
 				747A12582A5735EB00EEDCFC /* Frameworks */,
@@ -110,9 +110,9 @@
 			);
 			dependencies = (
 			);
-			name = "CD-disk";
+			name = ShaderSamples;
 			productName = "CD-disk";
-			productReference = 747A125B2A5735EB00EEDCFC /* CD-disk.app */;
+			productReference = 747A125B2A5735EB00EEDCFC /* ShaderSamples.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -130,7 +130,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 747A12562A5735EB00EEDCFC /* Build configuration list for PBXProject "CD-disk" */;
+			buildConfigurationList = 747A12562A5735EB00EEDCFC /* Build configuration list for PBXProject "ShaderSamples" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -143,7 +143,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				747A125A2A5735EB00EEDCFC /* CD-disk */,
+				747A125A2A5735EB00EEDCFC /* ShaderSamples */,
 			);
 		};
 /* End PBXProject section */
@@ -298,7 +298,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"CD-disk/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"ShaderSamples/Preview Content\"";
 				DEVELOPMENT_TEAM = P67Q4Q7HA9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -328,7 +328,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"CD-disk/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"ShaderSamples/Preview Content\"";
 				DEVELOPMENT_TEAM = P67Q4Q7HA9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -354,7 +354,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		747A12562A5735EB00EEDCFC /* Build configuration list for PBXProject "CD-disk" */ = {
+		747A12562A5735EB00EEDCFC /* Build configuration list for PBXProject "ShaderSamples" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				747A12672A5735EC00EEDCFC /* Debug */,
@@ -363,7 +363,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		747A12692A5735EC00EEDCFC /* Build configuration list for PBXNativeTarget "CD-disk" */ = {
+		747A12692A5735EC00EEDCFC /* Build configuration list for PBXNativeTarget "ShaderSamples" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				747A126A2A5735EC00EEDCFC /* Debug */,

@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "747A125A2A5735EB00EEDCFC"
-               BuildableName = "CD-disk.app"
-               BlueprintName = "CD-disk"
-               ReferencedContainer = "container:CD-disk.xcodeproj">
+               BuildableName = "ShaderSamples.app"
+               BlueprintName = "ShaderSamples"
+               ReferencedContainer = "container:ShaderSamples.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -44,9 +44,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "747A125A2A5735EB00EEDCFC"
-            BuildableName = "CD-disk.app"
-            BlueprintName = "CD-disk"
-            ReferencedContainer = "container:CD-disk.xcodeproj">
+            BuildableName = "ShaderSamples.app"
+            BlueprintName = "ShaderSamples"
+            ReferencedContainer = "container:ShaderSamples.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -61,9 +61,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "747A125A2A5735EB00EEDCFC"
-            BuildableName = "CD-disk.app"
-            BlueprintName = "CD-disk"
-            ReferencedContainer = "container:CD-disk.xcodeproj">
+            BuildableName = "ShaderSamples.app"
+            BlueprintName = "ShaderSamples"
+            ReferencedContainer = "container:ShaderSamples.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
