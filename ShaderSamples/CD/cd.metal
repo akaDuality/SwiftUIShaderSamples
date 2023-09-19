@@ -36,7 +36,7 @@ float3 streak(float2 uv, float angle, float3 color, float width, float maxBright
     * diameter; // brighter on the edge
     
     // Get only center waves
-    float limit = 1/(width/3.);
+    float limit = 3/width;
     float mask = 0.0;
     if (uvY >= -limit && uvY <= limit) { // [-0.125; +0.125]
         mask = 1.0; // show only single wave near 0
