@@ -18,7 +18,8 @@ using namespace metal;
 
     // Normalized pixel coordinates (from 0 to 1)
     float2 uv = position_yflip / viewSize;
-    float2 uv_stretch = float2(uv.x+((uv.x-0.5)*pow(uv.y,6)*t3*0.1), uv.y * (uv.y * pow((1-(t2*0.01)), 8.0)) + (1-uv.y) * uv.y);
+    float2 uv_stretch = float2(uv.x+((uv.x-0.5)*pow(uv.y,6)*t3*0.1),
+                               uv.y * (uv.y * pow((1-(t2*0.01)), 8.0)) + (1-uv.y) * uv.y);
     uv_stretch = mix(uv, uv_stretch, smoothstep(1.1, 1.0, t));
     float4 color = float4(layer.sample(uv_stretch * viewSize));
 
@@ -29,7 +30,6 @@ using namespace metal;
         float2 uv2 = uv;
         uv2 -= 0.5;
         uv2.x *= viewSize.x / viewSize.y;
-        uv2.x -= 0.1;
 
         float2 uv_bang = float2(uv2.x, uv2.y);
         float2 uv_bang_origin = float2(uv_bang.x, uv_bang.y-uv_y_dynamic_island_offset);
@@ -65,7 +65,6 @@ using namespace metal;
 
     uv -= 0.5;
     uv.x *= viewSize.x / viewSize.y;
-    uv.x -= 0.1;
 
     float2 lighten_uv = float2(uv.x*0.65, uv.y - t + 0.5);
     float d = smoothstep(0, 0.6, 0.1/length(lighten_uv)-uv_y_dynamic_island_offset)*0.25;
